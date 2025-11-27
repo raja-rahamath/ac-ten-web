@@ -1,0 +1,86 @@
+{
+  "home": {
+    "hero": {
+      "title": "AI-Powered Maintenance Management",
+      "subtitle": "Streamline your maintenance operations with intelligent automation, real-time tracking, and seamless customer experience.",
+      "getStarted": "Get Started",
+      "learnMore": "Learn More"
+    },
+    "features": {
+      "title": "Why Choose AgentCare?",
+      "ai": {
+        "title": "AI-Powered Assistant",
+        "description": "Let our intelligent AI handle customer inquiries, create service requests, and provide instant support 24/7."
+      },
+      "tracking": {
+        "title": "Real-Time Tracking",
+        "description": "Track your service requests, technician locations, and job progress in real-time from anywhere."
+      },
+      "mobile": {
+        "title": "Mobile First",
+        "description": "Access all features on-the-go with our powerful mobile apps for both customers and technicians."
+      },
+      "scheduling": {
+        "title": "Smart Scheduling",
+        "description": "Automatically assign the right technician based on skills, location, and availability."
+      },
+      "invoicing": {
+        "title": "Automated Invoicing",
+        "description": "Generate and send invoices automatically when jobs are completed. Accept payments online."
+      },
+      "analytics": {
+        "title": "Powerful Analytics",
+        "description": "Gain insights into your operations with detailed reports and performance dashboards."
+      }
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "step1": {
+        "title": "Customer Request",
+        "description": "Customers submit requests via chat, portal, or phone. Our AI understands and categorizes instantly."
+      },
+      "step2": {
+        "title": "Smart Assignment",
+        "description": "The system automatically assigns the best available technician based on skills and location."
+      },
+      "step3": {
+        "title": "Real-Time Updates",
+        "description": "Both customers and managers track progress in real-time from request to completion."
+      },
+      "step4": {
+        "title": "Seamless Billing",
+        "description": "Invoice is generated automatically. Customers pay online. Everyone is happy."
+      }
+    },
+    "pricing": {
+      "title": "Simple, Transparent Pricing",
+      "subtitle": "Choose the plan that fits your business",
+      "starter": {
+        "name": "Starter",
+        "price": "99",
+        "period": "/month",
+        "description": "Perfect for small businesses",
+        "features": ["Up to 5 technicians", "100 requests/month", "AI Chat Assistant", "Mobile Apps", "Email Support"]
+      },
+      "professional": {
+        "name": "Professional",
+        "price": "299",
+        "period": "/month",
+        "description": "For growing service companies",
+        "features": ["Up to 25 technicians", "Unlimited requests", "AI Chat + Voice", "Custom Branding", "Priority Support", "Advanced Analytics"]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "price": "Custom",
+        "period": "",
+        "description": "For large organizations",
+        "features": ["Unlimited technicians", "Unlimited requests", "Multi-location", "Custom Integrations", "Dedicated Support", "SLA Guarantee"]
+      }
+    },
+    "cta": {
+      "title": "Ready to Transform Your Service Operations?",
+      "subtitle": "Join hundreds of businesses already using AgentCare",
+      "button": "Start Free Trial"
+    }
+  }
+}
