@@ -49,20 +49,21 @@ function useAnimatedCounter(target: number, duration: number = 2000, delay: numb
   return { count, ref };
 }
 
-// Psychology-based: Live activity notifications (Social Proof - Cialdini)
-const LIVE_ACTIVITIES = [
-  { name: 'Mohammed K.', location: 'Dubai', action: 'just signed up', time: '2 min ago' },
-  { name: 'Sarah A.', location: 'Abu Dhabi', action: 'started free trial', time: '5 min ago' },
-  { name: 'Gulf FM Co.', location: 'Riyadh', action: 'upgraded to Pro', time: '8 min ago' },
-  { name: 'Ahmed R.', location: 'Doha', action: 'completed setup', time: '12 min ago' },
-  { name: 'Emirates Services', location: 'Dubai', action: 'invited team', time: '15 min ago' },
-];
+// COMMENTED OUT FOR FUTURE USE - Psychology-based: Live activity notifications (Social Proof - Cialdini)
+// const LIVE_ACTIVITIES = [
+//   { name: 'Mohammed K.', location: 'Dubai', action: 'just signed up', time: '2 min ago' },
+//   { name: 'Sarah A.', location: 'Abu Dhabi', action: 'started free trial', time: '5 min ago' },
+//   { name: 'Gulf FM Co.', location: 'Riyadh', action: 'upgraded to Pro', time: '8 min ago' },
+//   { name: 'Ahmed R.', location: 'Doha', action: 'completed setup', time: '12 min ago' },
+//   { name: 'Emirates Services', location: 'Dubai', action: 'invited team', time: '15 min ago' },
+// ];
 
 export default function HomePage() {
   const t = useTranslations('home');
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [showActivity, setShowActivity] = useState(false);
-  const [currentActivity, setCurrentActivity] = useState(0);
+  // COMMENTED OUT FOR FUTURE USE - Live activity state
+  // const [showActivity, setShowActivity] = useState(false);
+  // const [currentActivity, setCurrentActivity] = useState(0);
 
   // Scroll progress indicator (Goal-Gradient Effect)
   useEffect(() => {
@@ -75,27 +76,27 @@ export default function HomePage() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Live activity notifications (Social Proof)
-  useEffect(() => {
-    const showNotification = () => {
-      setShowActivity(true);
-      setTimeout(() => setShowActivity(false), 4000);
-    };
-
-    // Show first notification after 5 seconds
-    const initialTimeout = setTimeout(showNotification, 5000);
-
-    // Rotate through activities
-    const interval = setInterval(() => {
-      setCurrentActivity((prev) => (prev + 1) % LIVE_ACTIVITIES.length);
-      showNotification();
-    }, 15000);
-
-    return () => {
-      clearTimeout(initialTimeout);
-      clearInterval(interval);
-    };
-  }, []);
+  // COMMENTED OUT FOR FUTURE USE - Live activity notifications (Social Proof)
+  // useEffect(() => {
+  //   const showNotification = () => {
+  //     setShowActivity(true);
+  //     setTimeout(() => setShowActivity(false), 4000);
+  //   };
+  //
+  //   // Show first notification after 5 seconds
+  //   const initialTimeout = setTimeout(showNotification, 5000);
+  //
+  //   // Rotate through activities
+  //   const interval = setInterval(() => {
+  //     setCurrentActivity((prev) => (prev + 1) % LIVE_ACTIVITIES.length);
+  //     showNotification();
+  //   }, 15000);
+  //
+  //   return () => {
+  //     clearTimeout(initialTimeout);
+  //     clearInterval(interval);
+  //   };
+  // }, []);
 
   return (
     <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
@@ -107,8 +108,8 @@ export default function HomePage() {
         />
       </div>
 
-      {/* Live Activity Notification - Social Proof (Cialdini) */}
-      <div
+      {/* COMMENTED OUT FOR FUTURE USE - Live Activity Notification - Social Proof (Cialdini) */}
+      {/* <div
         className={`fixed bottom-6 left-6 z-50 transition-all duration-500 ease-out ${
           showActivity ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0 pointer-events-none'
         }`}
@@ -128,7 +129,7 @@ export default function HomePage() {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Animated Background */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
@@ -136,8 +137,8 @@ export default function HomePage() {
         <div className="absolute -bottom-1/2 right-0 h-[500px] w-[500px] rounded-full bg-purple-500/20 blur-[120px] dark:bg-purple-500/10" />
       </div>
 
-      {/* Urgency Banner - FOMO Psychology (Cialdini's Scarcity Principle) */}
-      <div className="bg-gradient-to-r from-primary to-purple-600 text-white py-2.5 text-center text-sm font-medium">
+      {/* COMMENTED OUT FOR FUTURE USE - Urgency Banner - FOMO Psychology (Cialdini's Scarcity Principle) */}
+      {/* <div className="bg-gradient-to-r from-primary to-purple-600 text-white py-2.5 text-center text-sm font-medium">
         <div className="container mx-auto px-4 flex items-center justify-center gap-2 flex-wrap">
           <span className="inline-flex items-center gap-1.5">
             <span className="relative flex h-2 w-2">
@@ -156,7 +157,7 @@ export default function HomePage() {
             </svg>
           </Link>
         </div>
-      </div>
+      </div> */}
 
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-xl">
@@ -173,7 +174,8 @@ export default function HomePage() {
             <div className="hidden items-center gap-8 md:flex">
               <Link href="#features" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Features</Link>
               <Link href="#how-it-works" className="text-sm text-muted-foreground hover:text-foreground transition-colors">How it Works</Link>
-              <Link href="#testimonials" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Reviews</Link>
+              {/* COMMENTED OUT FOR FUTURE USE - Reviews link */}
+              {/* <Link href="#testimonials" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Reviews</Link> */}
               <Link href="#pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Pricing</Link>
               <Link href="#faq" className="text-sm text-muted-foreground hover:text-foreground transition-colors">FAQ</Link>
             </div>
@@ -184,12 +186,13 @@ export default function HomePage() {
                 <span className="text-muted-foreground">/</span>
                 <Link href="/ar" className="text-muted-foreground hover:text-foreground transition-colors">عربي</Link>
               </div>
-              <Link href="/portal" className="hidden sm:inline-flex items-center justify-center whitespace-nowrap font-medium transition-colors border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs">
+              {/* COMMENTED OUT FOR FUTURE USE - Sign In and Get Started buttons */}
+              {/* <Link href="/portal" className="hidden sm:inline-flex items-center justify-center whitespace-nowrap font-medium transition-colors border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs">
                 Sign In
               </Link>
               <Link href="/portal/register" className="inline-flex items-center justify-center whitespace-nowrap font-medium bg-gradient-to-r from-primary to-purple-600 text-white hover:opacity-90 transition-opacity h-8 rounded-md px-3 text-xs">
                 Get Started
-              </Link>
+              </Link> */}
             </div>
           </nav>
         </div>
@@ -213,7 +216,8 @@ export default function HomePage() {
           <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground sm:text-xl">
             {t('hero.subtitle')}
           </p>
-          <div className="flex flex-col justify-center gap-4 sm:flex-row">
+          {/* COMMENTED OUT FOR FUTURE USE - Hero buttons */}
+          {/* <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <Link href="/portal/register" className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium bg-gradient-to-r from-primary to-purple-600 text-white hover:opacity-90 transition-all shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 h-11 rounded-md px-8">
               {t('hero.getStarted')}
             </Link>
@@ -221,7 +225,7 @@ export default function HomePage() {
               <PlayIcon />
               Watch Demo
             </Link>
-          </div>
+          </div> */}
         </div>
 
         {/* Hero Visual */}
@@ -283,8 +287,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Video Section */}
-      <section id="video" className="py-24 bg-muted/30">
+      {/* COMMENTED OUT FOR FUTURE USE - Video Section */}
+      {/* <section id="video" className="py-24 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <span className="mb-4 inline-block text-sm font-semibold text-primary">SEE IT IN ACTION</span>
@@ -295,7 +299,6 @@ export default function HomePage() {
           </div>
           <div className="mx-auto max-w-4xl">
             <div className="relative aspect-video rounded-2xl border border-border/40 bg-card/50 overflow-hidden shadow-2xl">
-              {/* Video Placeholder - Replace with actual video */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-purple-600/20 flex items-center justify-center">
                 <div className="text-center">
                   <button className="group mb-4 flex h-20 w-20 mx-auto items-center justify-center rounded-full bg-white/90 shadow-lg transition-transform hover:scale-110">
@@ -306,7 +309,6 @@ export default function HomePage() {
                   <p className="text-muted-foreground text-sm">Click to play demo video</p>
                 </div>
               </div>
-              {/* Decorative elements */}
               <div className="absolute top-4 left-4 flex gap-2">
                 <div className="h-3 w-3 rounded-full bg-red-500/80" />
                 <div className="h-3 w-3 rounded-full bg-yellow-500/80" />
@@ -315,7 +317,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Features Section */}
       <section id="features" className="py-24">
@@ -403,8 +405,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section id="testimonials" className="py-24">
+      {/* COMMENTED OUT FOR FUTURE USE - Testimonials Section */}
+      {/* <section id="testimonials" className="py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <span className="mb-4 inline-block text-sm font-semibold text-primary">TESTIMONIALS</span>
@@ -464,7 +466,7 @@ export default function HomePage() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Mobile App Section */}
       <section id="mobile-apps" className="py-24 bg-muted/30">
@@ -668,14 +670,15 @@ export default function HomePage() {
               <p className="mx-auto mb-8 max-w-2xl text-white/80">
                 {t('cta.subtitle')}
               </p>
-              <div className="flex flex-col sm:flex-row justify-center gap-4">
+              {/* COMMENTED OUT FOR FUTURE USE - CTA buttons */}
+              {/* <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link href="/portal/register" className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium h-11 rounded-md px-8 bg-white text-primary hover:bg-white/90 transition-colors">
                   {t('cta.button')}
                 </Link>
                 <Link href="#" className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium h-11 rounded-md px-8 border border-white/30 text-white hover:bg-white/10 transition-colors">
                   Schedule Demo
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -895,7 +898,8 @@ function PricingCard({
           </li>
         ))}
       </ul>
-      <Link
+      {/* COMMENTED OUT FOR FUTURE USE - Get Started button */}
+      {/* <Link
         href="/portal/register"
         className={`inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium h-10 px-4 py-2 w-full ${
           featured
@@ -904,7 +908,7 @@ function PricingCard({
         } transition-colors`}
       >
         Get Started
-      </Link>
+      </Link> */}
     </div>
   );
 }
