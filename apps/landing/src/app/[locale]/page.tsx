@@ -14,7 +14,7 @@ function useAnimatedCounter(target: number, duration: number = 2000, delay: numb
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0].isIntersecting && !hasStarted) {
+        if (entries[0]?.isIntersecting && !hasStarted) {
           setHasStarted(true);
         }
       },
