@@ -186,10 +186,10 @@ export default function HomePage() {
                 <span className="text-muted-foreground">/</span>
                 <Link href="/ar" className="text-muted-foreground hover:text-foreground transition-colors">عربي</Link>
               </div>
-              <Link href="http://localhost:3001/login" className="hidden sm:inline-flex items-center justify-center whitespace-nowrap font-medium transition-colors border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs">
+              <Link href="http://116.203.196.139:3002/login" className="hidden sm:inline-flex items-center justify-center whitespace-nowrap font-medium transition-colors border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs">
                 Sign In
               </Link>
-              <Link href="http://localhost:3001/services" className="inline-flex items-center justify-center whitespace-nowrap font-medium bg-gradient-to-r from-primary to-purple-600 text-white hover:opacity-90 transition-opacity h-8 rounded-md px-3 text-xs">
+              <Link href="http://116.203.196.139:3002/services" className="inline-flex items-center justify-center whitespace-nowrap font-medium bg-gradient-to-r from-primary to-purple-600 text-white hover:opacity-90 transition-opacity h-8 rounded-md px-3 text-xs">
                 Browse Services
               </Link>
             </div>
@@ -217,13 +217,13 @@ export default function HomePage() {
           </p>
           {/* Hero Buttons */}
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
-            <Link href="http://localhost:3001/services" className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium bg-gradient-to-r from-primary to-purple-600 text-white hover:opacity-90 transition-all shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 h-11 rounded-md px-8 gap-2">
+            <Link href="http://116.203.196.139:3002/services" className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium bg-gradient-to-r from-primary to-purple-600 text-white hover:opacity-90 transition-all shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 h-11 rounded-md px-8 gap-2">
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
               Browse Services
             </Link>
-            <Link href="http://localhost:3001/login" className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors border border-border/60 bg-background/50 backdrop-blur-sm hover:bg-muted h-11 rounded-md px-8 gap-2">
+            <Link href="http://116.203.196.139:3002/login" className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors border border-border/60 bg-background/50 backdrop-blur-sm hover:bg-muted h-11 rounded-md px-8 gap-2">
               Sign In
             </Link>
           </div>
